@@ -1,0 +1,28 @@
+{
+  "name": "editor-mu-online",
+  "version": "1.0.0",
+  "description": "Editor Mu online",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "echo 'Local API listening on PORT 5000' & json-server --watch api/item.json -p 5000 -q",
+    "start": "concurrently \"npm run server\" \"npm run api\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "json-server": "^0.17.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.2",
+    "pg": "^8.11.3",
+    "sequelize": "^6.35.2",
+    "tedious": "^16.6.1"
+  }
+}
